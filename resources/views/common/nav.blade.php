@@ -14,7 +14,7 @@
 	<!-- Collect the nav links, forms, and other content for toggling -->
 		<div class="collapse navbar-collapse" id="navbar-collapse-1">
 		  	<ul class="nav navbar-nav">
-			    <li><a href="{{ url('/') }}">首页 <span class="sr-only">(current)</span></a></li>
+			    <li><a href="{{ url('/index') }}">首页 <span class="sr-only">(current)</span></a></li>
 			    <li><a href="{{ url('/screen') }}">全景</a></li>
 			    <li><a href="{{ url('/product') }}">业务</a></li>
 			    <li><a href="{{ url('/news') }}">新闻中心</a></li>

@@ -1,0 +1,125 @@
+<krpano version="1.18" onstart="startup();">
+	
+	<!-- panos imgage -->
+<!-- 	<preview url="../img/panos/p1/preview.jpg" />
+	<image>
+		<cube url="../img/panos/p1/pano_%s.jpg" />
+	</image> -->
+
+
+
+	<!-- grid preview pano -->
+	<preview type="grid(cube,64,64,512,0xCCCCCC,0xF6F6F6,0x999999);" />
+
+	<!-- view/fov settings -->
+	<view hlookat="0" vlookat="0" fovtype="VFOV" fov="90" fovmin="30" fovmax="150" limitview="auto" vlookatmin="-90" vlookatmax="+90" />
+	
+	<!-- display a Flash or HTML5 logo to visualize which viewer was used -->
+	<layer name="flashlogo" url="../img/logs/flashlogo80.png" align="righttop" x="10" y="10" scale="0.5" enabled="false" keep="true" devices="flash" />
+	<layer name="html5logo" url="../img/logs/html5logo80.png" align="righttop" x="10" y="10" scale="0.5" enabled="false" keep="true" devices="html5" />
+	<layer name="webgl"     url="../img/logs/webgl_logo.png"  align="lefttop"  x="10" y="10" scale="0.5" enabled="false" keep="true" devices="webgl" />
+	<layer name="css3d"     url="../img/logs/css3d_logo.png"  align="lefttop"  x="10" y="10" scale="0.5" enabled="false" keep="true" devices="css3d+!webgl" />
+
+	
+	<!-- define a button style -->
+	<style name="button" 
+		   url="../plugins/textfield.swf"
+		   children="false"
+		   css="text-align:center;color:#FFFFFF;font-family:Arial;font-weight:blod;font-size:16px;"
+		   vcenter="true"
+		   backgroundcolor="#C9C2C2" backgroundalpha="0.667" roundedge="1" border="true" bordercolor="oxDDDDDD" width="150" height="24" shadow="0"
+		   />
+
+
+	<!-- Flash/HTML5 only logos for some example -->
+	<style name="flashonly" enabled="false" alpha="0.7" devices="html5" />
+	<style name="html5only" enabled="false" alpha="0.7" devices="flash" />
+	<style name="flashonly_logo" url="../img/logs/flashlogo80.png" align="rightbottom" scale="0.25" x="-5" y="-5" enabled="false" />
+	<style name="html5only_logo" url="../img/logs/html5logo80.png" align="rightbottom" scale="0.25" x="-5" y="-5" enabled="false" />
+
+
+	<!-- define a simple text style -->
+	<style name="text"
+		   url="../plugins/textfield.swf"
+		   children="false"
+		   background="false"
+		   border="false"
+		   enabled="false"
+		   />
+ 
+
+ 	<!-- add a text-shadow to the text style (only for HTML5) -->
+	<style name="text" devices="html5"
+		   textshadow="0.1"
+		   textshadowrange="4"
+		   textshadowcolor="0x000000"
+		   textshadowalpha="1.0"
+		   />
+
+	
+	<!-- for Flash add a glowing+shadow effect to hide the bad non-antialiased Flashplayer font rendering -->
+	<style name="text" devices="flash"
+		   effect="glow(0xFFFFFF,0.6,4,2);glow(0x000000,1,2,2);dropshadow(0,0,0x000000,1,0.5);"
+		   />
+
+
+	<!-- layout / elements only for desktop and tablet devices -->
+	<krpano devices="desktop|tablet">
+
+		<!-- the title and info texts -->
+		<layer name="text1" style="text" align="center" y="-255"  zorder="1"  html="WELCOME TO TIANXIE" css="text-align:center; color:#FFFFFF; font-family:Arial; font-size:26px; font-weight:bold; font-style:italic;" />
+		<layer name="text2" style="text" align="center" y="-205" zorder="1"  html="AR与VR 带你走进全景世界" css="text-align:center; color:#FFFFFF; font-family:Arial; font-size:14px; font-style:italic;" />
+		<layer name="enter" style="button"  align="center" y="-170"  html="进入"  onclick="loadexample('xml-usage/animated-hotspots/anihotspots.xml');" />
+
+		<layer name="control" type="container" align="center" width="100%" height="28" y="40%" bgcolor="0x000000" bgalpha="0.5" zorder="0">
+			<layer name="bsp01" style="button"   align="center" x="-150" html="1"   onclick="loadexample('first.xml');" />
+			<layer name="bsp02" style="button"   align="center"  x="0" html="2"   onclick="loadexample('second.xml');" />
+			<layer name="bsp03" style="button"   align="center" x="150" html="3"   onclick="loadexample('three.xml');" />
+		</layer>
+	</krpano>
+
+
+	<!-- layout / elements only for mobile devices - an alternative smaller layout with fewer examples -->
+	<krpano devices="mobile">
+
+		<!-- set a bigger font-size for the button style -->
+		<style name="button" height="52" css="text-align:center; color:#FFFFFF; font-family:Arial; font-weight:bold; font-size:15px;" />
+
+		<!-- the title and info texts -->
+		<layer name="text1" style="text" align="center" y="-285" zorder="1" alpha="0" html="WELCOME TO TIANXIE" css="text-align:center; color:#FFFFFF; font-family:Arial; font-size:26px; font-weight:bold; font-style:italic;" />
+		<layer name="text2" style="text" align="center" y="-225" zorder="1" alpha="0" html="AR与VR 带你走进全景世界" css="text-align:center; color:#FFFFFF; font-family:Arial; font-size:14px; font-style:italic;" />
+		<layer name="enter" style="button"  align="center" y="-190"  html="进入"  onclick="loadexample('xml-usage/animated-hotspots/anihotspots.xml');" />
+
+
+
+
+	</krpano>
+
+	<action name="startup">
+		<!-- startup action (called from the onstart event) - slide-in the example-button-containers -->
+		delayedcall(0.5, scale_in_examples() );
+	</action>
+
+	<action name="scale_in_examples">
+<!-- 		tween(layer[bg1].x, 0%, 0.5, easeOutQuint);
+		tween(layer[bg2].x, 0%, 0.5, easeOutQuint); -->
+		delayedcall(0.5,
+			tween(layer[text1].alpha, 1.0, 0.5, easeOutQuint);
+			tween(layer[text2].alpha, 1.0, 0.5, easeOutQuint);
+		  );
+	</action>
+
+	
+	<action name="loadexample">
+		<!-- clear the ondown, onclick events from the caller (to avoid double clicking) -->
+		set(ondown,null);
+		set(onclick,null);
+
+		<!-- and finally load the given example (a bit delayed to see the slide out animation) -->
+		delayedcall(0.7, loadpano(%1, null, MERGE, BLEND(0.5)) );
+	</action>
+
+	<action name="resetkrpano">
+
+
+</krpano>
