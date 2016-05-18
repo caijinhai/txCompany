@@ -440,7 +440,7 @@ class BladeCompiler extends Compiler implements CompilerInterface
     }
 
     /**
-     * Compile the show statements into valid PHP.
+     * Compile the krpano statements into valid PHP.
      *
      * @param  string  $expression
      * @return string

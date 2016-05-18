@@ -424,7 +424,7 @@ class ProgressBar
      *
      * This is useful if you wish to write some output
      * while a progress bar is running.
-     * Call display() to show the progress bar again.
+     * Call display() to krpano the progress bar again.
      */
     public function clear()
     {

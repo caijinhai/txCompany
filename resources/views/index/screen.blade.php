@@ -2,32 +2,32 @@
 
 @section('content')
 
-	<div class="container">
-		<div class="row">
-			<div class="col-xs-12 col-md-6 screen-adver">
-					<a href=""><img src="{{ asset('img/screen-ad.jpg') }}" alt="" width="100%" /></a>
-					<span>做个高效的程序猿</span>
-			</div>
-			<div class="col-xs-12 col-md-6 screen-adver">
-				<div class=" screen-imgBox">
-					<a href=""><img src="{{ asset('img/photo4.jpg') }}" alt="" width="100%" /></a>
-					<span>天蝎直播</span>
-				</div>
-				<div class=" screen-imgBox">
-					<a href=""><img src="{{ asset('img/photo5.jpg') }}" alt="" width="100%" /></a>
-					<span>直播那些事</span>
-				</div>
-				<div class=" screen-imgBox">
-					<a href=""><img src="{{ asset('img/photo5.jpg') }}" alt="" width="100%" /></a>
-					<span>教你一分钟上手</span>
-				</div>
-				<div class=" screen-imgBox">
-					<a href=""><img src="{{ asset('img/photo4.jpg') }}" alt="" width="100%" /></a>
-					<span>做个合格的程序员</span>
-				</div>
-			</div>
-		</div>
-	</div>
+	{{--<div class="container">--}}
+		{{--<div class="row">--}}
+			{{--<div class="col-xs-12 col-md-6 screen-adver">--}}
+					{{--<a href=""><img src="{{ asset('img/screen-ad.jpg') }}" alt="" width="100%" /></a>--}}
+					{{--<span>做个高效的程序猿</span>--}}
+			{{--</div>--}}
+			{{--<div class="col-xs-12 col-md-6 screen-adver">--}}
+				{{--<div class=" screen-imgBox">--}}
+					{{--<a href=""><img src="{{ asset('img/photo4.jpg') }}" alt="" width="100%" /></a>--}}
+					{{--<span>天蝎直播</span>--}}
+				{{--</div>--}}
+				{{--<div class=" screen-imgBox">--}}
+					{{--<a href=""><img src="{{ asset('img/photo5.jpg') }}" alt="" width="100%" /></a>--}}
+					{{--<span>直播那些事</span>--}}
+				{{--</div>--}}
+				{{--<div class=" screen-imgBox">--}}
+					{{--<a href=""><img src="{{ asset('img/photo5.jpg') }}" alt="" width="100%" /></a>--}}
+					{{--<span>教你一分钟上手</span>--}}
+				{{--</div>--}}
+				{{--<div class=" screen-imgBox">--}}
+					{{--<a href=""><img src="{{ asset('img/photo4.jpg') }}" alt="" width="100%" /></a>--}}
+					{{--<span>做个合格的程序员</span>--}}
+				{{--</div>--}}
+			{{--</div>--}}
+		{{--</div>--}}
+	{{--</div>--}}
 
 	<section>
 		<div class="container">

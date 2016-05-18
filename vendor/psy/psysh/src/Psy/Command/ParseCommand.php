@@ -23,7 +23,7 @@ use Symfony\Component\Console\Output\OutputInterface;
 use Symfony\Component\VarDumper\Caster\Caster;
 
 /**
- * Parse PHP code and show the abstract syntax tree.
+ * Parse PHP code and krpano the abstract syntax tree.
  */
 class ParseCommand extends Command implements PresenterAware
 {
@@ -88,10 +88,10 @@ class ParseCommand extends Command implements PresenterAware
         $this
             ->setName('parse')
             ->setDefinition($definition)
-            ->setDescription('Parse PHP code and show the abstract syntax tree.')
+            ->setDescription('Parse PHP code and krpano the abstract syntax tree.')
             ->setHelp(
                 <<<'HELP'
-Parse PHP code and show the abstract syntax tree.
+Parse PHP code and krpano the abstract syntax tree.
 
 This command is used in the development of PsySH. Given a string of PHP code,
 it pretty-prints the PHP Parser parse tree.

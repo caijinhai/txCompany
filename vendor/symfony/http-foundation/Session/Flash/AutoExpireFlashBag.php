@@ -65,7 +65,7 @@ class AutoExpireFlashBag implements FlashBagInterface
         $this->flashes = &$flashes;
 
         // The logic: messages from the last request will be stored in new, so we move them to previous
-        // This request we will show what is in 'display'.  What is placed into 'new' this time round will
+        // This request we will krpano what is in 'display'.  What is placed into 'new' this time round will
         // be moved to display next time round.
         $this->flashes['display'] = array_key_exists('new', $this->flashes) ? $this->flashes['new'] : array();
         $this->flashes['new'] = array();

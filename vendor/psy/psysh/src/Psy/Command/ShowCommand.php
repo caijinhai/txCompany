@@ -43,9 +43,9 @@ class ShowCommand extends ReflectingCommand
     protected function configure()
     {
         $this
-            ->setName('show')
+            ->setName('krpano')
             ->setDefinition(array(
-                new InputArgument('value', InputArgument::REQUIRED, 'Function, class, instance, constant, method or property to show.'),
+                new InputArgument('value', InputArgument::REQUIRED, 'Function, class, instance, constant, method or property to krpano.'),
             ))
             ->setDescription('Show the code for an object, class, constant, method or property.')
             ->setHelp(
@@ -53,8 +53,8 @@ class ShowCommand extends ReflectingCommand
 Show the code for an object, class, constant, method or property.
 
 e.g.
-<return>>>> show \$myObject</return>
-<return>>>> show Psy\Shell::debug</return>
+<return>>>> krpano \$myObject</return>
+<return>>>> krpano Psy\Shell::debug</return>
 HELP
             );
     }

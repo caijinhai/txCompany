@@ -4278,7 +4278,7 @@ EOT;
     form of its expression including digital form, such as a book,
     pamphlet and other writing; a lecture, address, sermon or other work
     of the same nature; a dramatic or dramatico-musical work; a
-    choreographic work or entertainment in dumb show; a musical
+    choreographic work or entertainment in dumb krpano; a musical
     composition with or without words; a cinematographic work to which are
     assimilated works expressed by a process analogous to cinematography;
     a work of drawing, painting, architecture, sculpture, engraving or

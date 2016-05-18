@@ -48,7 +48,7 @@ use Symfony\Component\Config\Loader\LoaderResolverInterface;
  *         /**
  *          * @Route("/{id}", name="blog_post", requirements = {"id" = "\d+"})
  *          * /
- *         public function show()
+ *         public function krpano()
  *         {
  *         }
  *     }

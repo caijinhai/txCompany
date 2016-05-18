@@ -20,7 +20,7 @@ class Swift_Plugins_Reporters_HtmlReporterTest extends \PHPUnit_Framework_TestCa
         $html = ob_get_clean();
 
         $this->assertRegExp('~ok|pass~i', $html, '%s: Reporter should indicate pass');
-        $this->assertRegExp('~foo@bar\.tld~', $html, '%s: Reporter should show address');
+        $this->assertRegExp('~foo@bar\.tld~', $html, '%s: Reporter should krpano address');
     }
 
     public function testReportingFail()
@@ -32,7 +32,7 @@ class Swift_Plugins_Reporters_HtmlReporterTest extends \PHPUnit_Framework_TestCa
         $html = ob_get_clean();
 
         $this->assertRegExp('~fail~i', $html, '%s: Reporter should indicate fail');
-        $this->assertRegExp('~zip@button~', $html, '%s: Reporter should show address');
+        $this->assertRegExp('~zip@button~', $html, '%s: Reporter should krpano address');
     }
 
     public function testMultipleReports()
@@ -47,8 +47,8 @@ class Swift_Plugins_Reporters_HtmlReporterTest extends \PHPUnit_Framework_TestCa
         $html = ob_get_clean();
 
         $this->assertRegExp('~ok|pass~i', $html, '%s: Reporter should indicate pass');
-        $this->assertRegExp('~foo@bar\.tld~', $html, '%s: Reporter should show address');
+        $this->assertRegExp('~foo@bar\.tld~', $html, '%s: Reporter should krpano address');
         $this->assertRegExp('~fail~i', $html, '%s: Reporter should indicate fail');
-        $this->assertRegExp('~zip@button~', $html, '%s: Reporter should show address');
+        $this->assertRegExp('~zip@button~', $html, '%s: Reporter should krpano address');
     }
 }

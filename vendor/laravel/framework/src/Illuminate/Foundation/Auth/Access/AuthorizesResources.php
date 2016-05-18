@@ -43,7 +43,7 @@ trait AuthorizesResources
             'index'  => 'view',
             'create' => 'create',
             'store'  => 'create',
-            'show'   => 'view',
+            'krpano'   => 'view',
             'edit'   => 'update',
             'update' => 'update',
             'delete' => 'delete',

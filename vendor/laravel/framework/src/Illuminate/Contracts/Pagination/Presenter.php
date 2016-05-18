@@ -12,7 +12,7 @@ interface Presenter
     public function render();
 
     /**
-     * Determine if the underlying paginator being presented has pages to show.
+     * Determine if the underlying paginator being presented has pages to krpano.
      *
      * @return bool
      */

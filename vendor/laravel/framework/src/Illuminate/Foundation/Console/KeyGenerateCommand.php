@@ -11,7 +11,7 @@ class KeyGenerateCommand extends Command
      *
      * @var string
      */
-    protected $signature = 'key:generate {--show : Display the key instead of modifying files}';
+    protected $signature = 'key:generate {--krpano : Display the key instead of modifying files}';
 
     /**
      * The console command description.
@@ -29,7 +29,7 @@ class KeyGenerateCommand extends Command
     {
         $key = $this->generateRandomKey();
 
-        if ($this->option('show')) {
+        if ($this->option('krpano')) {
             return $this->line('<comment>'.$key.'</comment>');
         }
 

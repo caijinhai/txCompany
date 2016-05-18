@@ -404,7 +404,7 @@ the poor animal's feelings. 'I quite forgot you didn't like cats.'
 YOU like cats if you were me?'
 
 'Well, perhaps not,' said Alice in a soothing tone: 'don't be angry
-about it. And yet I wish I could show you our cat Dinah: I think you'd
+about it. And yet I wish I could krpano you our cat Dinah: I think you'd
 take a fancy to cats if you could only see her. She is such a dear quiet
 thing,' Alice went on, half to herself, as she swam lazily about in the
 pool, 'and she sits purring so nicely by the fire, licking her paws and
@@ -421,7 +421,7 @@ cats: nasty, low, vulgar things! Don't let me hear the name again!'
 'I won't indeed!' said Alice, in a great hurry to change the subject of
 conversation. 'Are you--are you fond--of--of dogs?' The Mouse did not
 answer, so Alice went on eagerly: 'There is such a nice little dog near
-our house I should like to show you! A little bright-eyed terrier, you
+our house I should like to krpano you! A little bright-eyed terrier, you
 know, with oh, such long curly brown hair! And it'll fetch things when
 you throw them, and it'll sit up and beg for its dinner, and all sorts
 of things--I can't remember half of them--and it belongs to a farmer,
@@ -2486,7 +2486,7 @@ Fainting in Coils.'
 
 'What was THAT like?' said Alice.
 
-'Well, I can't show it you myself,' the Mock Turtle said: 'I'm too
+'Well, I can't krpano it you myself,' the Mock Turtle said: 'I'm too
 stiff. And the Gryphon never learnt it.'
 
 'Hadn't time,' said the Gryphon: 'I went to the Classics master, though.

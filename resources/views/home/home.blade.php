@@ -19,16 +19,19 @@
 			color:#000;
 			text-decoration: none;
 		}
+		.common{
+			width: 100%;
+			height: 100%;
+		}
 
 	</style>
-	<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css" rel='stylesheet' type='text/css'>
-    <link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700" rel='stylesheet' type='text/css'>
-
-    <!-- Styles -->
-    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
+    <link href="{{ asset('css/app.css') }}" rel="stylesheet">
 </head>
 <body>
-	<script src="{{ asset('js/embedpano.js') }}"></script>
+
+
+
+	<script src="{{ asset('js/tour.js') }}"></script>
 
 	<div class="container" id="title" >
     	<div class="row text-center">
@@ -40,7 +43,7 @@
     	</div>
     </div>
 
-    <div id="carousel-example-generic" class="carousel slide" data-ride="carousel" style="width:100%;height:100%;">
+    <div id="carousel-example-generic" class="carousel slide common"  >
         <!-- Indicators -->
         <ol class="carousel-indicators" >
             <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
@@ -49,29 +52,29 @@
         </ol>
 
       <!-- Wrapper for slides -->
-        <div class="carousel-inner" role="listbox" style="width:100%;height:100%;" >
-            <div class="item active" style="width:100%;height:100%;">
-                <div id="pano2" style="width:100%;height:100%;">
+        <div class="carousel-inner common" role="listbox" >
+            <div class="item active common">
+                <div id="pano2" class="common">
 					<noscript><table style="width:100%;height:100%;"><tr style="vertical-align:middle;"><td><div style="text-align:center;">ERROR:<br/><br/>Javascript not activated<br/><br/></div></td></tr></table></noscript>
 					<script>
-						embedpano({swf:"{{ asset('swf/krpano.swf') }}", xml:"{{ asset('xml/second.xml') }}", target:"pano2", html5:"auto", passQueryParameters:true});
+						embedpano({swf:"{{ asset('swf/tour.swf') }}",xml:"{{ asset('xml/krpano1.xml') }}", target:"pano2", html5:"auto", passQueryParameters:true});
 					</script>
 				</div>
             </div>
-            <div class="item " style="width:100%;height:100%;">
-                <div id="pano" style="width:100%;height:100%;">
+            <div class="item common">
+                <div id="pano" class="common">
 					<noscript><table style="width:100%;height:100%;"><tr style="vertical-align:middle;"><td><div style="text-align:center;">ERROR:<br/><br/>Javascript not activated<br/><br/></div></td></tr></table></noscript>
 					<script>
-						embedpano({swf:"{{ asset('swf/krpano.swf') }}", xml:"{{ asset('xml/first.xml') }}", target:"pano", html5:"auto", passQueryParameters:true});
+						embedpano({swf:"{{ asset('swf/tour.swf') }}",xml:"{{ asset('xml/krpano2.xml') }}", target:"pano", html5:"auto", passQueryParameters:true});
 					</script>
 				</div>
 
             </div>
-            <div class="item" style="width:100%;height:100%;">
-                <div id="pano3" style="width:100%;height:100%;">
+            <div class="item common" >
+                <div id="pano3" class="common">
 					<noscript><table style="width:100%;height:100%;"><tr style="vertical-align:middle;"><td><div style="text-align:center;">ERROR:<br/><br/>Javascript not activated<br/><br/></div></td></tr></table></noscript>
 					<script>
-						embedpano({swf:"{{ asset('swf/krpano.swf') }}", xml:"{{ asset('xml/three.xml') }}", target:"pano3", html5:"auto", passQueryParameters:true});
+						embedpano({swf:"{{ asset('swf/tour.swf') }}",xml:"{{ asset('xml/krpano1.xml') }}", target:"pano3", html5:"auto", passQueryParameters:true});
 					</script>
 				</div>
             </div>
@@ -79,7 +82,6 @@
     </div>
 
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <script src="{{ asset('js/app.js') }}"></script>
 </body>
 </html>

@@ -18,7 +18,7 @@ class ResourceRegistrar
      *
      * @var array
      */
-    protected $resourceDefaults = ['index', 'create', 'store', 'show', 'edit', 'update', 'destroy'];
+    protected $resourceDefaults = ['index', 'create', 'store', 'krpano', 'edit', 'update', 'destroy'];
 
     /**
      * The parameters set for this resource instance.
@@ -319,7 +319,7 @@ class ResourceRegistrar
     }
 
     /**
-     * Add the show method for a resourceful route.
+     * Add the krpano method for a resourceful route.
      *
      * @param  string  $name
      * @param  string  $base
@@ -331,7 +331,7 @@ class ResourceRegistrar
     {
         $uri = $this->getResourceUri($name).'/{'.$base.'}';
 
-        $action = $this->getResourceAction($name, $controller, 'show', $options);
+        $action = $this->getResourceAction($name, $controller, 'krpano', $options);
 
         return $this->router->get($uri, $action);
     }

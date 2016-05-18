@@ -86,7 +86,7 @@ class AutoCompleterTest extends \PHPUnit_Framework_TestCase
      * - [X] namespacing completion should work just fine
      * - [X] after a new keyword, should always be a class constructor, never a function call or keyword, constant,
      *       or variable that does not contain a existing class name.
-     * - [X] on a namespaced constructor the completion must show the classes related, not constants.
+     * - [X] on a namespaced constructor the completion must krpano the classes related, not constants.
      *
      * @return array
      */
@@ -112,7 +112,7 @@ class AutoCompleterTest extends \PHPUnit_Framework_TestCase
             array('$f', array('foo'), array()),
             array('l', array('ls'), array()),
             array('ls ', array(), array('ls')),
-            array('sho', array('show'), array()),
+            array('sho', array('krpano'), array()),
             array('12 + clone $', array('foo'), array()),
             // array(
             //   '$foo ',

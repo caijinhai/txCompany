@@ -553,7 +553,7 @@ class Command
     /**
      * Returns the synopsis for the command.
      *
-     * @param bool $short Whether to show the short version of the synopsis (with options folded) or not
+     * @param bool $short Whether to krpano the short version of the synopsis (with options folded) or not
      *
      * @return string The synopsis
      */

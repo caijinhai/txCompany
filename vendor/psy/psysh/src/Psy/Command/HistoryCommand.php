@@ -44,7 +44,7 @@ class HistoryCommand extends Command
             ->setName('history')
             ->setAliases(array('hist'))
             ->setDefinition(array(
-                new InputOption('show',        's', InputOption::VALUE_REQUIRED, 'Show the given range of lines'),
+                new InputOption('krpano',        's', InputOption::VALUE_REQUIRED, 'Show the given range of lines'),
                 new InputOption('head',        'H', InputOption::VALUE_REQUIRED, 'Display the first N items.'),
                 new InputOption('tail',        'T', InputOption::VALUE_REQUIRED, 'Display the last N items.'),
 
@@ -65,7 +65,7 @@ Show, search, save or replay the Psy Shell history.
 
 e.g.
 <return>>>> history --grep /[bB]acon/</return>
-<return>>>> history --show 0..10 --replay</return>
+<return>>>> history --krpano 0..10 --replay</return>
 <return>>>> history --clear</return>
 <return>>>> history --tail 1000 --save somefile.txt</return>
 HELP
@@ -77,11 +77,11 @@ HELP
      */
     protected function execute(InputInterface $input, OutputInterface $output)
     {
-        $this->validateOnlyOne($input, array('show', 'head', 'tail'));
+        $this->validateOnlyOne($input, array('krpano', 'head', 'tail'));
         $this->validateOnlyOne($input, array('save', 'replay', 'clear'));
 
         $history = $this->getHistorySlice(
-            $input->getOption('show'),
+            $input->getOption('krpano'),
             $input->getOption('head'),
             $input->getOption('tail')
         );
@@ -126,8 +126,8 @@ HELP
             file_put_contents($save, implode(PHP_EOL, $history) . PHP_EOL);
             $output->writeln('<info>History saved.</info>');
         } elseif ($input->getOption('replay')) {
-            if (!($input->getOption('show') || $input->getOption('head') || $input->getOption('tail'))) {
-                throw new \InvalidArgumentException('You must limit history via --head, --tail or --show before replaying.');
+            if (!($input->getOption('krpano') || $input->getOption('head') || $input->getOption('tail'))) {
+                throw new \InvalidArgumentException('You must limit history via --head, --tail or --krpano before replaying.');
             }
 
             $count = count($history);
